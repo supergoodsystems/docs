@@ -8,7 +8,7 @@
 * [Node.js](installing-clients/node.js.md)
 * [Python](installing-clients/python.md)
 * [Ruby](installing-clients/ruby.md)
-* [Go](installing-clients/go.md)
+* [Go (coming soon!)](installing-clients/go-coming-soon.md)
 
 ## Dashboard
 
