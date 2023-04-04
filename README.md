@@ -1,2 +1,2 @@
-# Page 1
+# How it Works
 

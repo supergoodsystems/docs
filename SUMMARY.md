@@ -1,3 +1,16 @@
 # Table of contents
 
-* [Page 1](README.md)
+* [How it Works](README.md)
+* [Getting Started](getting-started.md)
+
+## Installing Clients
+
+* [Node.js](installing-clients/node.js.md)
+* [Python](installing-clients/python.md)
+* [Ruby](installing-clients/ruby.md)
+* [Go](installing-clients/go.md)
+
+## Dashboard
+
+* [Reporting](dashboard/reporting.md)
+* [Configuration](dashboard/configuration.md)
