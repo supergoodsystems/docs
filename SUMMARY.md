@@ -12,5 +12,4 @@
 
 ## Dashboard
 
-* [Reporting](dashboard/reporting.md)
 * [Configuration](dashboard/configuration.md)
