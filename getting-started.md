@@ -1,7 +1,9 @@
-# Getting Started
+# Get Started
 
-[Supergood](https://supergood.ai) enables your engineering and finance teams to manage all your external API's. Monitor every external API in your system with just 2 lines of code. Get started in just a few easy steps:
+[Supergood](https://supergood.ai) enables your engineering and finance teams to manage your external APIs. Monitor every external API in your system with just 2 lines of code.
 
-1. Head over to [https://dashboard.supergood.ai](https://dashboard.supergood.ai) and create an account and an organization. Be sure to use your work email address when signing up.
-2. Head over to the left hand panel and click "API Keys", then "Generate API Keys" to get your client ID and client secret.
-3. Supergood currently supports monitoring API calls in Node.JS, Ruby, Python and Go, with more languages added all the time.
+To get started:
+
+1. Go to [https://dashboard.supergood.ai](https://dashboard.supergood.ai) and use your work email address to create an account and organization.
+2. On the left panel, click **API Keys** > **Generate API Keys** to get your client ID and client secret.
+3. Integrate with a Supergood client. Supergood currently supports monitoring API calls in [Node.js](/installing-clients/node.js.md), [Ruby](/installing-clients/ruby.md), and [Python](/installing-clients/python.md), with more languages on the horizon.
