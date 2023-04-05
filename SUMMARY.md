@@ -1,14 +1,13 @@
 # Table of contents
 
-* [How it Works](README.md)
-* [Getting Started](getting-started.md)
+* [How It Works](README.md)
+* [Get Started](getting-started.md)
 
-## Installing Clients
+## Integrate with clients
 
 * [Node.js](installing-clients/node.js.md)
 * [Python](installing-clients/python.md)
 * [Ruby](installing-clients/ruby.md)
-* [Go (coming soon!)](installing-clients/go-coming-soon.md)
 
 ## Dashboard
 
