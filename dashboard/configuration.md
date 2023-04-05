@@ -30,6 +30,5 @@ In the format of:`<domain-nam>.<top-level-domain>` \
 \
 Examples:
 
-`supergood.ai`
-
-`amazon.com`
+* `supergood.ai`
+* `amazon.com`
