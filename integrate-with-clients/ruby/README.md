@@ -36,6 +36,10 @@ require 'supergood'
 Supergood.init({ client_id: "<CLIENT_ID>", client_secret: "<CLIENT_SECRET>" })
 ```
 
+#### Local development
+
+Setting the `CLIENT_ID` and `CLIENT_SECRET_ID` to `local-client-id` and `local-client-secret`, respectively, will disable making API calls to the supergood.ai server and instead log the payloads to the local console.
+
 ## 3. Monitor your API calls
 
 You're all set to use Supergood!
