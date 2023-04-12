@@ -12,4 +12,4 @@ While the Supergood database is encrypted, there potentially may be data embedde
 
 Hashing is done on your server and is configurable any time in the Supergood Dashboard.
 
-Learn more about hashing in the [Configuration](dashboard/configuration.md) section.
+Learn more about hashing in the [Configuration](broken-reference) section.

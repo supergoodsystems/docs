@@ -9,7 +9,3 @@
 * [Python](installing-clients/python.md)
 * [Ruby](integrate-with-clients/ruby/README.md)
   * [Configuration](integrate-with-clients/ruby/configuration.md)
-
-## Dashboard
-
-* [Configuration](dashboard/configuration.md)
