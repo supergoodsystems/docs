@@ -7,7 +7,8 @@
 
 * [Node.js](installing-clients/node.js.md)
 * [Python](installing-clients/python.md)
-* [Ruby](installing-clients/ruby.md)
+* [Ruby](integrate-with-clients/ruby/README.md)
+  * [Configuration](integrate-with-clients/ruby/configuration.md)
 
 ## Dashboard
 
