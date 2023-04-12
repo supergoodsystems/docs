@@ -8,8 +8,10 @@ _Default:_ _1000_
 
 Time in milliseconds between cache flushes. Smaller intervals are advised for larger traffic volumes. Represented as an integer.
 
+**Example:**
+
 ```
-{ flushInterval: 1000 }
+Supergood.init({ flushInterval: 1000 })
 ```
 
 ## keysToHash
@@ -20,12 +22,12 @@ An array of keys in the string path dot format like `path.to.key` that will take
 
 Keys to hash must start with `request` or `response` and the second key must be `body` or `headers`. After that, the path can be arbitrarily long.
 
-**Examples**:
+**Example**:
 
 `request.body.authorization_token` will hash the value stored at the key `authorization_token` located on the body of the request.
 
 ```
-{ keysToHash: ['request.body.authorization_token'] }
+Supergood.init({ keysToHash: ['request.body.authorization_token'] })
 ```
 
 ## ignoredDomains
@@ -36,9 +38,9 @@ An array of domains to ignore when caching traffic.
 
 In the format of:`<domain-name>.<top-level-domain>`
 
-**Examples**:
+**Example**:
 
 ```
-{ ignoredDomains: ['amazon.com', 'google.com'] }
+Supergood.init({ ignoredDomains: ['amazon.com', 'google.com'] })
 ```
 
