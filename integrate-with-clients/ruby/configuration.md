@@ -8,6 +8,10 @@ _Default:_ _1000_
 
 Time in milliseconds between cache flushes. Smaller intervals are advised for larger traffic volumes. Represented as an integer.
 
+```
+{ flushInterval: 1000 }
+```
+
 ## keysToHash
 
 _Default: \[]_&#x20;
