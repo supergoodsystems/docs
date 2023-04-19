@@ -1,6 +1,6 @@
 # How It Works
 
-**Supergood** is a lightweight client and monitoring service that ingests all your company's external API calls for cost and performance analysis, error reporting, and alerting. Supergood is currently available for [Node.js](installing-clients/node.js.md), [Python](integrate-with-clients/python/), [Ruby](integrate-with-clients/ruby/), and [Go](installing-clients/go-coming-soon.md) codebases, supporting all HTTP clients for each language.
+**Supergood** is a lightweight client and monitoring service that ingests all your company's external API calls for cost and performance analysis, error reporting, and alerting. Supergood is currently available for [Node.js](installing-clients/node.js.md), [Python](installing-clients/python.md), [Ruby](integrate-with-clients/ruby/), and [Go](installing-clients/go-coming-soon.md) codebases, supporting all HTTP clients for each language.
 
 The Supergood client quietly sits inside of your codebase and passively monitors all outbound HTTP requests. No proxy server required.
 

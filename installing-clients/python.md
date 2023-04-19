@@ -4,17 +4,15 @@ The Supergood Python client connects Supergood to your Python application. Follo
 
 ## 1. Install the Supergood library
 
-{% code title="Pip" %}
 ```bash
 pip install supergood
 ```
-{% endcode %}
 
 ## 2. Initialize the Supergood Library
 
 **Environment variables**
 
-Set the environment variables `SUPERGOOD_CLIENT_ID` and `SUPERGOOD_CLIENT_SECRET` using the API keys generated in the [getting started instructions](../../getting-started.md).
+Set the environment variables `SUPERGOOD_CLIENT_ID` and `SUPERGOOD_CLIENT_SECRET` using the API keys generated in the [getting started instructions](../getting-started.md).
 
 Initialize the Supergood client at the root of your application, or anywhere you're making API calls with the following code:
 
@@ -28,7 +26,7 @@ Client()
 
 You can also pass the API keys in manually without setting environment variables.\
 \
-Replace `<CLIENT_ID>` and `<CLIENT_SECRET>` with the API keys you generated in the [getting started instructions](../../getting-started.md).
+Replace `<CLIENT_ID>` and `<CLIENT_SECRET>` with the API keys you generated in the [getting started instructions](../getting-started.md).
 
 ```python
 from Supergood import Client
