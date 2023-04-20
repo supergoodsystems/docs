@@ -5,7 +5,8 @@
 
 ## Integrate with clients
 
-* [Node.js](installing-clients/node.js.md)
+* [Node.js](integrate-with-clients/node.js/README.md)
+  * [Configuration](integrate-with-clients/node.js/configuration.md)
 * [Python](installing-clients/python.md)
   * [Configuration](integrate-with-clients/python/configuration.md)
 * [Ruby](integrate-with-clients/ruby/README.md)
