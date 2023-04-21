@@ -30,6 +30,18 @@ Keys to hash must start with `request` or `response` and the second key must be 
 Supergood.init({ config: keysToHash: ['request.body.authorization_token'] }})
 ```
 
+## allowedDomains
+
+_Default: \[]_
+
+An array of domains to ignore when caching traffic. Will match on partial domains and takes precedence over domains specified in ignoredDomains.
+
+**Example**:
+
+```typescript
+Supergood.init({ config: { allowedDomains: ['amazon.com', 'google'] }})
+```
+
 ## ignoredDomains
 
 _Default: \[]_
