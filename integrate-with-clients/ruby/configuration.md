@@ -36,7 +36,7 @@ _Default: \[]_
 
 An array of domains to ignore when caching traffic.
 
-In the format of:`<domain-name>.<top-level-domain>`
+Will pattern match on the hostname, as long as the input string is contained in the hostname.&#x20;
 
 **Example**:
 
@@ -44,3 +44,16 @@ In the format of:`<domain-name>.<top-level-domain>`
 Supergood.init({ ignoredDomains: ['amazon.com', 'google.com'] })
 ```
 
+## allowedDomains
+
+_Default: \[]_
+
+An array of domains to only allow when caching traffic, overrides any `ignoredDomains` set.
+
+Will pattern match on the hostname, as long as the input string is contained in the hostname.&#x20;
+
+**Example**:
+
+```
+Supergood.init({ allowedDomains: ['amazon.com', 'google.com'] })
+```

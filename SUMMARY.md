@@ -6,6 +6,7 @@
 ## Integrate with clients
 
 * [Node.js](integrate-with-clients/node.js/README.md)
+  * [Next.js](integrate-with-clients/node.js/next.js.md)
   * [Configuration](integrate-with-clients/node.js/configuration.md)
 * [Python](installing-clients/python.md)
   * [Configuration](integrate-with-clients/python/configuration.md)
