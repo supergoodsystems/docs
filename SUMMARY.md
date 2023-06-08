@@ -5,8 +5,10 @@
 
 ## Integrate with clients
 
-* [Node.js](integrate-with-clients/node.js/README.md)
-  * [Next.js](integrate-with-clients/node.js/next.js.md)
+* [Node](integrate-with-clients/node.js/README.md)
+  * [Node](integrate-with-clients/node.js/node.js.md)
+  * [Express](integrate-with-clients/node.js/express.md)
+  * [Koa](integrate-with-clients/node.js/koa.md)
   * [Configuration](integrate-with-clients/node.js/configuration.md)
 * [Python](installing-clients/python.md)
   * [Configuration](integrate-with-clients/python/configuration.md)
