@@ -8,7 +8,7 @@ Upon installation, the client will attach itself to whichever HTTP library you'r
 
 ## Hashing sensitive data
 
-While the Supergood database is encrypted, there potentially may be data embedded within these API calls that you're unwilling to send off to a remote server. As such, you are able to configure on a key level at any depth in the JSON, which values needed to be obfuscated on the headers and/or body. Optionally, you're able to hash the entire headers or body if desired.
+While the Supergood database is encrypted, there may potentially be data embedded within these API calls that you're unwilling to send off to a remote server. As such, you can configure on a key level, at any depth in the JSON, which values needed to be obfuscated on the headers and/or body. You can hash the entire headers or body if desired.
 
 Hashing is done on your server and is configurable any time in the Supergood Dashboard.
 
