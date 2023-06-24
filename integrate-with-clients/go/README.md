@@ -23,15 +23,20 @@ if err == nil {
 
 Set the environment variables `SUPERGOOD_CLIENT_ID` and `SUPERGOOD_CLIENT_SECRET` using the API keys generated in the [getting started instructions](../../getting-started.md).
 
-## Passing Keys
-
-You can also pass the API keys in manually without setting environment variables.
-
-Replace `<CLIENT_ID>` and `<CLIENT_SECRET>` with the API keys you generated in the [getting started instructions](../../getting-started.md).
-
 ```go
 sg, err := supergood.New(&supergood.Options{RecordRequestBody: true, ClientId: <CLIENT_ID>, ClientSecret: <CLIENT_SECRET>})
 if err == nil {
 	http.DefaultClient = sg.DefaultClient
 }
 ```
+
+## Passing Keys
+
+You can also pass the API keys in manually without setting environment variables.
+
+Replace `<CLIENT_ID>` and `<CLIENT_SECRET>` with the API keys you generated in the [getting started instructions](../../getting-started.md).
+
+### Links
+
+* [Supergood-go Source Code](https://github.com/supergoodsystems/supergood-go)
+* [Supergood-go example integration](https://github.com/supergoodsystems/plaid-go)
