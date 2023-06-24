@@ -14,3 +14,5 @@
   * [Configuration](integrate-with-clients/python/configuration.md)
 * [Ruby](integrate-with-clients/ruby/README.md)
   * [Configuration](integrate-with-clients/ruby/configuration.md)
+* [Go](integrate-with-clients/go/README.md)
+  * [Configuration](integrate-with-clients/go/configuration.md)
