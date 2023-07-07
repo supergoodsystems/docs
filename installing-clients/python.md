@@ -1,6 +1,6 @@
 # Python
 
-The Supergood Python client connects Supergood to your Python application. Follow these steps to integrate with the Python client.
+The Supergood Python client connects Supergood to your Python application. Follow these steps to integrate with the Python client. All values are redacted by default unless otherwise specified in the configuration.
 
 ## 1. Install the Supergood library
 

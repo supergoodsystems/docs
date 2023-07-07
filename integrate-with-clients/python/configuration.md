@@ -14,20 +14,18 @@ Time in milliseconds between cache flushes. Smaller intervals are advised for la
 Client(config={ flushInterval: 1000 })
 ```
 
-## keysToHash
+## includedKeys
 
 _Default: \[]_&#x20;
 
-An array of keys in the string path dot format like `path.to.key` that will take the SHA1 hash of the actual value instead of the returned value. This masks sensitive information that can not live outside of your server.
-
-Keys to hash must start with `request` or `response` and the second key must be `body` or `headers`. After that, the path can be arbitrarily long.
+An array of keys in the string path dot format like `path.to.key` that will not be redacted on the client side before being sent to the server.
 
 **Example**:
 
-`request.body.authorization_token` will hash the value stored at the key `authorization_token` located on the body of the request.
+Below will NOT redact the value stored at the key `authorization_token` located on the either on the body of the request or the body of the response.
 
 ```
-Client(config={ keysToHash: ['request.body.authorization_token'] })
+Client(config={ includedKeys: ['authorization_token'] })
 ```
 
 ## ignoredDomains
