@@ -1,6 +1,8 @@
 # Python
 
-The Supergood Python client connects Supergood to your Python application. Follow these steps to integrate with the Python client. All values are redacted by default unless otherwise specified in the configuration.
+The Supergood Python client connects Supergood to your Python application. Follow these steps to integrate with the Python client.
+
+All values are redacted by default unless otherwise specified in the configuration.
 
 ## 1. Install the Supergood library
 
@@ -14,7 +16,7 @@ pip install supergood
 
 Set the environment variables `SUPERGOOD_CLIENT_ID` and `SUPERGOOD_CLIENT_SECRET` using the API keys generated in the [getting started instructions](../getting-started.md).
 
-Initialize the Supergood client at the root of your application, or anywhere you're making API calls with the following code:
+Initialize the Supergood client at the root of your application, or anywhere you're making API calls.
 
 ```python
 from Supergood import Client
@@ -26,6 +28,7 @@ Client()
 
 You can also pass the API keys in manually without setting environment variables.\
 \
+
 Replace `<CLIENT_ID>` and `<CLIENT_SECRET>` with the API keys you generated in the [getting started instructions](../getting-started.md).
 
 ```python

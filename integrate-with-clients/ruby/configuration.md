@@ -1,6 +1,6 @@
 # Configuration
 
-Optional configuration may be passed to the `init` function, the parameters may be configured as follows:
+This page describes possible parameter configurations. Pass any desired configuration to the `init` function.
 
 ## flushInterval
 

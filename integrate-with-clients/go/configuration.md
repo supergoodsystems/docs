@@ -1,36 +1,36 @@
 # Configuration
 
-Optional configuration may be passed to the `new` function, the parameters may be configured as follows:
+This page describes possible parameter configurations. Pass any desired configuration to the `new` function.
 
 ### RecordRequestBody
 
 _Default: false_
 
-RecordRequestBody additionally sends the body of requests to the Supergood cloud for debugging. Defaults to false, if set true all values will be completely redacted unless otherwise specified.
+`RecordRequestBody` additionally sends the body of requests to the Supergood cloud for debugging. If set to true, all values will be completely redacted unless otherwise specified.
 
 ### IncludeSpecifiedRequestBodyKeys
 
 _Default: \[]_
 
-IncludeSpecifiedRequestBodyKeys is a list of keys who's value which to NOT redact in the request body, if RecordRequestBody is set to 'true'
+`IncludeSpecifiedRequestBodyKeys` is a list of keys whose value to NOT redact in the request body if `RecordRequestBody` is set to true.
 
 ### RecordResponseBody
 
 _Default: false_
 
-RecordResponseBody additionally sends the body of responses to the Supergood cloud for debugging. Defaults to false, if set true all values will be redacted unless otherwise specified.
+`RecordResponseBody` additionally sends the body of responses to the Supergood cloud for debugging. If set to true, all values will be redacted unless otherwise specified.
 
 ### **IncludeSpecifiedResponseBodyKeys**
 
 _Default: \[]_
 
-IncludeSpecifiedResponseBodyKeys is a list of keys who's values which to NOT redact in the response body, if RecordResponseBody is set to 'true'
+`IncludeSpecifiedResponseBodyKeys` is a list of keys whose values to NOT redact in the response body if `RecordResponseBody` is set to true.
 
 ### **IncludeSpecifiedRequestHeaderKeys**
 
 _Default: \[]_
 
-Supergood replaces sensitive headers by the sha1 of their contents, by default. IncludeSpecifiedRequestHeaderKeys will override this behavior and include the specified value. Matching is case insensitive.
+Supergood replaces sensitive headers by the sha1 of their contents, by default. `IncludeSpecifiedRequestHeaderKeys` will override this behavior and include the specified value. Matching is case insensitive.
 
 ### **AllowedDomains**
 
@@ -42,4 +42,4 @@ List of strings to match against the host of the request URL in order to determi
 
 _Default: 1 \* time.Second_
 
-Flush interval configures how frequently Supergood sends batches of logs to the API.
+`FlushInterval` configures how frequently Supergood sends batches of logs to the API.
