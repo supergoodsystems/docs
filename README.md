@@ -4,12 +4,12 @@
 
 The Supergood client quietly sits inside of your codebase and passively monitors all outbound HTTP requests. No proxy server required.
 
-Upon installation, the client will attach itself to whichever HTTP library you're using for the given language and efficiently cache all outbound requests and responses you make. At a set interval that you define, these calls are shipped off to the Supergood Dashboard for analysis, reporting, and alerting.
+Upon installation, the client will attach itself to whichever HTTP library you're using for the given language and efficiently cache all outbound requests and responses you make. At a set interval that you define, these calls are sent to the Supergood Dashboard for analysis, reporting, and alerting.
 
 ## Hashing sensitive data
 
-While the Supergood database is encrypted, there may potentially be data embedded within these API calls that you're unwilling to send off to a remote server. As such, you can configure on a key level, at any depth in the JSON, which values needed to be obfuscated on the headers and/or body. You can hash the entire headers or body if desired.
+While the Supergood database is encrypted, there could be data embedded within these API calls that you're unwilling to send to a remote server. As such, you can configure on a key level, at any depth in the JSON, which values need to be obfuscated on the headers and/or body. You can hash the entire headers or body if desired.
 
-Hashing is done on your server and is configurable any time in the Supergood Dashboard.
+Hashing is done on your server and is configurable at any time in the Supergood Dashboard.
 
 Learn more about hashing in the [Configuration](broken-reference) section.

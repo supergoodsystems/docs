@@ -1,6 +1,6 @@
 # Configuration
 
-Optional configuration may be passed to the `Client`, the parameters may be configured as follows:
+This page describes possible parameter configurations. Pass any desired configuration to the `Client`.
 
 ## flushInterval
 
@@ -22,7 +22,7 @@ An array of keys in the string path dot format like `path.to.key` that will not 
 
 **Example**:
 
-Below will NOT redact the value stored at the key `authorization_token` located on the either on the body of the request or the body of the response.
+This example will NOT redact the value stored at the key `authorization_token` located on either the body of the request or the body of the response.
 
 ```
 Client(config={ includedKeys: ['authorization_token'] })

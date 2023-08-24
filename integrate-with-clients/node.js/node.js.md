@@ -30,6 +30,7 @@ Supergood.init()
 
 You can also pass the API keys in manually without setting environment variables.\
 \
+
 Replace `<CLIENT_ID>` and `<CLIENT_SECRET>` with the API keys you generated in the [getting started instructions](../../getting-started.md).
 
 ```typescript

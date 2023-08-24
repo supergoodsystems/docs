@@ -1,6 +1,6 @@
 # Configuration
 
-Optional configuration may be passed to the `init` function, the parameters may be configured as follows:
+This page describes possible parameter configurations. Pass any desired configuration to the `init` function.
 
 ## flushInterval
 
@@ -34,7 +34,7 @@ Supergood.init({ config: keysToHash: ['request.body.authorization_token'] }})
 
 _Default: \[]_
 
-An array of domains to ignore when caching traffic. Will match on partial domains and takes precedence over domains specified in ignoredDomains.
+An array of domains to ignore when caching traffic. Will match on partial domains and takes precedence over domains specified in `ignoredDomains`.
 
 **Example**:
 
