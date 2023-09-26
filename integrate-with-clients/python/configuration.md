@@ -10,13 +10,13 @@ Time in milliseconds between cache flushes. Smaller intervals are advised for la
 
 **Example:**
 
-```
+```python
 Client(config={ flushInterval: 1000 })
 ```
 
 ## includedKeys
 
-_Default: \[]_&#x20;
+_Default: \[]_
 
 An array of keys in the string path dot format like `path.to.key` that will not be redacted on the client side before being sent to the server.
 
@@ -24,7 +24,7 @@ An array of keys in the string path dot format like `path.to.key` that will not 
 
 This example will NOT redact the value stored at the key `authorization_token` located on either the body of the request or the body of the response.
 
-```
+```python
 Client(config={ includedKeys: ['authorization_token'] })
 ```
 
@@ -38,7 +38,19 @@ In the format of:`<domain-name>.<top-level-domain>`
 
 **Example**:
 
-```
+```python
 Client(config={ ignoredDomains: ['amazon.com', 'google.com'] })
+```
+
+## ignoreRedaction
+
+_Default: False_
+
+Boolean to override the redaction of all values.
+
+**Example:**
+
+```python
+Client(config={ ignoreRedaction: True })
 ```
 
