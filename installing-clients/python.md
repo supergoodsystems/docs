@@ -2,8 +2,6 @@
 
 The Supergood Python client connects Supergood to your Python application. Follow these steps to integrate with the Python client.
 
-All values are redacted by default unless otherwise specified in the configuration.
-
 ## 1. Install the Supergood library
 
 ```bash
@@ -35,6 +33,8 @@ from Supergood import Client
 
 Client(client_id="<CLIENT_ID>", client_secret="<CLIENT_SECRET>")
 ```
+
+Note: If your application makes use of the `multiprocessing` library to make API calls, you'll need to initialize a client for each `Process`.&#x20;
 
 ## 3. Monitor your API calls
 

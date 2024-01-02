@@ -14,18 +14,16 @@ Time in milliseconds between cache flushes. Smaller intervals are advised for la
 Client(config={ flushInterval: 1000 })
 ```
 
-## includedKeys
+## configInterval
 
-_Default: \[]_
+_Default: 10000_
 
-An array of keys in the string path dot format like `path.to.key` that will not be redacted on the client side before being sent to the server.
+Time in milliseconds between fetching the remote config from the Supergood wizard. Represented as an integer.
 
-**Example**:
+**Example:**
 
-This example will NOT redact the value stored at the key `authorization_token` located on either the body of the request or the body of the response.
-
-```python
-Client(config={ includedKeys: ['authorization_token'] })
+```
+Client(config={ configInterval: 5000 })
 ```
 
 ## ignoredDomains
@@ -39,7 +37,7 @@ In the format of:`<domain-name>.<top-level-domain>`
 **Example**:
 
 ```python
-Client(config={ ignoredDomains: ['amazon.com', 'google.com'] })
+Client(config={ ignoredDomains: ['amazon.com', 'google.com', 'bbc.co.uk'] })
 ```
 
 ## ignoreRedaction
