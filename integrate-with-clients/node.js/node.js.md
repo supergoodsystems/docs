@@ -38,6 +38,10 @@ const Supergood = require('supergood')
 Supergood.init({ clientId: <CLIENT_ID>, clientSecret: <CLIENT_SECRET> })
 ```
 
+## Metadata
+
+
+
 ## Links
 
 * [Supergood npm package](https://www.npmjs.com/package/supergood)

@@ -1,15 +1,23 @@
 # How It Works
 
-**Supergood** is a lightweight client and monitoring service that ingests all your company's external API calls for cost and performance analysis, error reporting, and alerting. Supergood is currently available for [Node.js](integrate-with-clients/node.js), [Python](installing-clients/python.md), [Ruby](integrate-with-clients/ruby/), and [Go](installing-clients/go-coming-soon.md) codebases, supporting all HTTP clients for each language.
+**Supergood** is a lightweight client and monitoring service that ingests all your company's external API calls for cost and performance analysis, error reporting, and alerting. The Supergood client quietly sits inside of your codebase and passively monitors all outbound HTTP requests. No proxy server required.
 
-The Supergood client quietly sits inside of your codebase and passively monitors all outbound HTTP requests. No proxy server required.
+Supergood is currently available for [Node.js](integrate-with-clients/node.js), [Python](installing-clients/python.md), [Ruby](integrate-with-clients/ruby/), and [Go](installing-clients/go-coming-soon.md) backends, supporting all HTTP clients for each language.
 
-Upon installation, the client will attach itself to whichever HTTP library you're using for the given language and efficiently cache all outbound requests and responses you make. At a set interval that you define, these calls are sent to the Supergood Dashboard for analysis, reporting, and alerting.
+Upon initialization, the client will attach itself to the native HTTP library for the given language and cache outbound requests and responses. At a set interval, these payloads are sent to the Supergood Dashboard for analysis, reporting, and alerting.
+
+## Configuration
+
+The **Supergood Dashboard** enables remote configuration for the clients installed on your server. In addition to serving as a control center for every external API running through your system, the dashboard also enables users to exclude specific APIs from being monitored and modify the list of sensitive keys Supergood has automatically identified and redacted.
 
 ## Redacting sensitive data
 
-While the Supergood database is encrypted, there could be data embedded within these API calls that you're unwilling to send to a remote server. As such, you can configure on a key level, at any depth in the JSON, which values need to be obfuscated on the headers and/or body. You can hash the entire headers or body if desired.
+In order to ensure that sensitive data never leaves your server, users can configure on a key level, at any depth in the JSON, which values need to be redacted on the headers and/or body.
 
-Redacting is done on your server and is configurable at any time in the Supergood Dashboard.
+Redacting is done on your server and is configurable at any time in the **Supergood Dashboard.**
 
-Learn more about redacting in the [Configuration](broken-reference/) section.
+Before redacting, metadata from these values including Data Type and Data Length are extracted in order for Supergood to perform continuous anomaly detection on your providers. These redacted values are completely removed from the Supergood server and show up as **"\<supergood-redacted>"** when inspecting payloads on the **Supergood Dashboard**.
+
+## Compliance
+
+Supergood is SOC2 Type I compliant and is actively undergoing an audit for SOC2 Type II. A full report is available upon request by reaching out to security@supergood.ai .
