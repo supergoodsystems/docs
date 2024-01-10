@@ -1,45 +1,73 @@
 # Configuration
 
+[Go Client Instantiation](https://docs.supergood.ai/integrate-with-clients/go)
+
 This page describes possible parameter configurations. Pass any desired configuration to the `new` function.
 
-### RecordRequestBody
+### ClientID
 
-_Default: false_
+_Default: ""_
 
-`RecordRequestBody` additionally sends the body of requests to the Supergood cloud for debugging. If set to true, all values will be completely redacted unless otherwise specified.
+`ClientID` can be found on https://dashboard.supergood.ai/api-keys. It defaults to the `SUPERGOOD_CLIENT_ID` environment variable if not provided.
 
-### IncludeSpecifiedRequestBodyKeys
+### ClientSecret
 
-_Default: \[]_
+`ClientSecret` can be found on https://dashboard.supergood.ai/api-keys. It defaults to the `SUPERGOOD_CLIENT_SECRET` environment variable if not provided.
 
-`IncludeSpecifiedRequestBodyKeys` is a list of keys whose value to NOT redact in the request body if `RecordRequestBody` is set to true.
 
-### RecordResponseBody
 
-_Default: false_
+{% hint style="warning" %}
+The following parameters in this guide can bee configured directly in the Supergood dashboard without having to explicitly set it in the Go client constructor. [https://dashboard.supergood.ai/endpoints](https://dashboard.supergood.ai/endpoints)
+{% endhint %}
 
-`RecordResponseBody` additionally sends the body of responses to the Supergood cloud for debugging. If set to true, all values will be redacted unless otherwise specified.
+### RedactRequestBodyKeys
 
-### **IncludeSpecifiedResponseBodyKeys**
+`RedactRequestBodyKeys` is a map of top level domains to a list of key paths within the request body of values to be redacted.&#x20;
 
-_Default: \[]_
+```go
+RedactRequestBodyKeys: map[string][]string{
+	"plaid.com": []string{"path.to.redacted.[].field"},
+},
+```
 
-`IncludeSpecifiedResponseBodyKeys` is a list of keys whose values to NOT redact in the response body if `RecordResponseBody` is set to true.
+### RedactRequestHeaderKeys
 
-### **IncludeSpecifiedRequestHeaderKeys**
+`RedactRequestHeaderKeys` is a map of top level domains to a list of keys within the request headers of values to be redacted
 
-_Default: \[]_
+```go
+RedactRequestBodyKeys: map[string][]string{
+	"plaid.com": []string{"client-id", "client-secret},
+},
+```
 
-Supergood replaces sensitive headers by the sha1 of their contents, by default. `IncludeSpecifiedRequestHeaderKeys` will override this behavior and include the specified value. Matching is case insensitive.
+### RedactResponseBodyKeys
+
+`RedactResponseBodyKeys` is a map of top level domains to a list of key paths within the response body of values to be redacted.
+
+```go
+RedactResponseBodyKeys: map[string][]string{
+	"plaid.com": []string{"path.to.redacted.[].field"},
+},
+```
+
+### RedactResponseHeaderKeys
+
+`RedactResponseHeaderKeys` is a map of top level domains to a list of keys within the response headers of values to be redacted
+
+```go
+RedactResponseBodyKeys: map[string][]string{
+	"plaid.com": []string{"client-id", "client-secret},
+},
+```
 
 ### **AllowedDomains**
 
 _Default: \[]_
 
-List of strings to match against the host of the request URL in order to determine whether or not to log the request to Supergood, based on the domain. Case sensitive. By default, requests from all domains are logged.
+List of strings to match against the host of the request URL in order to determine whether or not to log the request to Supergood, based on the domain. Case sensitive. By default, requests from all domains are logged.&#x20;
 
 ### **FlushInterval**
 
 _Default: 1 \* time.Second_
 
-`FlushInterval` configures how frequently Supergood sends batches of logs to the API.
+`FlushInterval` configures how frequently Supergood sends batches of logs to the API. This parameter cannot be set directly in the Supergood dashboard and must be configured on the client.

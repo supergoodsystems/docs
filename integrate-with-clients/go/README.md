@@ -10,41 +10,39 @@ import (
 )
 ```
 
-## **2. Initialize Supergood as early in your app as possible**
-
-Set the default HTTP client to the default Supergood client to begin monitoring your calls.&#x20;
-
-```go
-sg, err := supergood.New(&supergood.Options{RecordRequestBody: true})
-if err == nil {
-	http.DefaultClient = sg.DefaultClient
-}
-```
-
-## **3. Set API Keys**
+## **2. Create your API keys**&#x20;
 
 **Environment variables**
 
-Set the environment variables `SUPERGOOD_CLIENT_ID` and `SUPERGOOD_CLIENT_SECRET` using the API keys generated in the [getting started instructions](../../getting-started.md).
+Create your `SUPERGOOD_CLIENT_ID` and `SUPERGOOD_CLIENT_SECRET` credentials which can be found by following the [getting started instructions](../../getting-started.md).
 
-**Passing keys**
+## **3. Initialize Supergood as early in your app as possible**
 
-You can alternatively pass the API keys in manually without setting environment variables.
-
-Replace `<CLIENT_ID>` and `<CLIENT_SECRET>` with the API keys you generated in the [getting started instructions](../../getting-started.md).
+Set the default HTTP client to the default Supergood client to begin monitoring your calls.
 
 ```go
-sg, err := supergood.New(&supergood.Options{RecordRequestBody: true, ClientId: <CLIENT_ID>, ClientSecret: <CLIENT_SECRET>})
+sg, err := supergood.New(&supergood.Options{
+	ClientID:     os.Getenv("SUPERGOOD_CLIENT_ID"),
+	ClientSecret: os.Getenv("SUPERGOOD_CLIENT_SECRET"),
+	ServiceName:  "My-Supergood-Service",
+})
+
 if err == nil {
 	http.DefaultClient = sg.DefaultClient
 }
 ```
+
+The ClientID and ClientSecret above are instantiated explicitly.  If you do not provide them in the constructor, the Supergood Client will attempt to read them from environment variables `SUPERGOOD_CLIENT_ID` and `SUPERGOOD_CLIENT_SECRET`.
 
 ## 3. Monitor your API calls
 
 You're all set to use Supergood!
 
 Head back to your [dashboard](https://dashboard.supergood.ai) to start monitoring your API calls and receiving reports.
+
+## 4. Redacting Sensitive Keys
+
+There may be some sensitive key material that you would like to redact on the client before it is ingested by Supergood. This can be done directly in the [Supergood Dashboard ](https://dashboard.supergood.ai/endpoints)and opening up the `keys redacted` pane. Redacted fields can also be explicitly set in the Go client constructor. More details on how can be found [here](https://docs.supergood.ai/integrate-with-clients/go/configuration).
 
 ## Links
 
