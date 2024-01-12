@@ -12,7 +12,7 @@ pip install supergood
 
 **Environment variables**
 
-Set the environment variables `SUPERGOOD_CLIENT_ID` and `SUPERGOOD_CLIENT_SECRET_ID` using the API keys generated in the [getting started instructions](../getting-started.md).
+Set the environment variables `SUPERGOOD_CLIENT_ID` and `SUPERGOOD_CLIENT_SECRET` using the API keys generated in the [getting started instructions](../getting-started.md).
 
 Initialize the Supergood client at the root of your application, or anywhere you're making API calls.
 
