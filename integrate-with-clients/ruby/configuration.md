@@ -14,20 +14,20 @@ Time in milliseconds between cache flushes. Smaller intervals are advised for la
 Supergood.init({ flushInterval: 1000 })
 ```
 
-## keysToHash
+## forceRedactAll
 
-_Default: \[]_&#x20;
+_Default: true_
 
-An array of keys in the string path dot format like `path.to.key` that will take the SHA1 hash of the actual value instead of the returned value. This masks sensitive information that can not live outside of your server.
+A flag, by default set to "true" will redact all the payload values for the request body, request headers, response body and response headers and send only the metadata of the payload value to the Supergood servers.
 
-Keys to hash must start with `request` or `response` and the second key must be `body` or `headers`. After that, the path can be arbitrarily long.
+The metadata consists only of the data type and data length.&#x20;
+
+If this flag is set to "false", Supergood will attempt to redact values that it deems to represent sensitive keys. All sensitive keys are configurable in the Supergood Dashboard.
 
 **Example**:
 
-`request.body.authorization_token` will hash the value stored at the key `authorization_token` located on the body of the request.
-
 ```
-Supergood.init({ keysToHash: ['request.body.authorization_token'] })
+Supergood.init({ forceRedactAll: false })
 ```
 
 ## ignoredDomains
@@ -36,7 +36,7 @@ _Default: \[]_
 
 An array of domains to ignore when caching traffic.
 
-Will pattern match on the hostname, as long as the input string is contained in the hostname.&#x20;
+Will pattern match on the hostname, as long as the input string is contained in the hostname.
 
 **Example**:
 
@@ -50,7 +50,7 @@ _Default: \[]_
 
 An array of domains to only allow when caching traffic, overrides any `ignoredDomains` set.
 
-Will pattern match on the hostname, as long as the input string is contained in the hostname.&#x20;
+Will pattern match on the hostname, as long as the input string is contained in the hostname.
 
 **Example**:
 
