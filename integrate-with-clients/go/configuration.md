@@ -20,6 +20,14 @@ _Default: ""_
 The following parameters in this guide can bee configured directly in the Supergood dashboard without having to explicitly set it in the Go client constructor. [https://dashboard.supergood.ai/endpoints](https://dashboard.supergood.ai/endpoints)
 {% endhint %}
 
+
+
+### ForceRedactAll
+
+_Default: False_
+
+`ForceRedactAll` is a boolean which when enabled will remove all values from the leaves of the request and response bodies as well as any headers in your payload. Supergood will still forward the keys of the request and response bodies.
+
 ### RedactRequestBodyKeys
 
 `RedactRequestBodyKeys` is a map of top level domains to a list of key paths within the request body of values to be redacted.&#x20;
@@ -35,7 +43,7 @@ RedactRequestBodyKeys: map[string][]string{
 `RedactRequestHeaderKeys` is a map of top level domains to a list of keys within the request headers of values to be redacted
 
 ```go
-RedactRequestBodyKeys: map[string][]string{
+RedactRequestHeaderKeys: map[string][]string{
 	"plaid.com": []string{"client-id", "client-secret},
 },
 ```
@@ -55,7 +63,7 @@ RedactResponseBodyKeys: map[string][]string{
 `RedactResponseHeaderKeys` is a map of top level domains to a list of keys within the response headers of values to be redacted
 
 ```go
-RedactResponseBodyKeys: map[string][]string{
+RedactResponseHeaderKeys: map[string][]string{
 	"plaid.com": []string{"client-id", "client-secret},
 },
 ```
