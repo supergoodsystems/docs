@@ -2,6 +2,8 @@
 
 * [How It Works](README.md)
 * [Get Started](getting-started.md)
+* [Cost Monitoring](cost-monitoring.md)
+* [Anomaly Detection](anomaly-detection.md)
 
 ## Integrate with clients
 
