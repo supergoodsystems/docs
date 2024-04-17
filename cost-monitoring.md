@@ -23,6 +23,6 @@ In order to configure the cost and thresholds:
 
 If this alert fires, you can go back to this page to increase the threshold or set "On Cost Threshold Exceeded" to "No action" to disable it.
 
-This threshold check runs at the same cadence as the interval in which you fetch the remoteConfig on the client, up to 2 minute intervals.
+The threshold check runs every 2 minutes, at which point the next refresh of your remote config (default 10 seconds) should trigger the Supergood block.
 
 <figure><img src=".gitbook/assets/cost-threshold.gif" alt=""><figcaption><p>Video demonstration on configuring the cost limit thresholds.</p></figcaption></figure>
