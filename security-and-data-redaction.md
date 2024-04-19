@@ -18,7 +18,7 @@ Supergood.init({
 })
 ```
 
-This flag will force every value to be nulled out and replaced only by it's metadata which includes, data type and size. If this flag is set, all values will be nulled out regardless of what is configured in the Supergood Dashboard.
+This flag will force every value to be nulled out and replaced only by it's metadata which includes the key's name and path, data type, and size. If this flag is set, all values will be nulled out regardless of what is configured in the Supergood Dashboard.
 
 As an example,
 
