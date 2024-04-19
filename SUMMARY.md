@@ -4,6 +4,7 @@
 * [Get Started](getting-started.md)
 * [Cost Monitoring](cost-monitoring.md)
 * [Anomaly Detection](anomaly-detection.md)
+* [Security & Data Redaction](security-and-data-redaction.md)
 
 ## Integrate with clients
 
