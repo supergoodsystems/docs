@@ -77,7 +77,7 @@ In order to configure the sensitive keys to redact:
 
 In order to configure sensitive keys to be allowed, follow the same flow as above, but either press the garbage can icon on the right hand side, or unselect a value in the payload by clicking a pink-highlighted value. Then press "save".
 
-Depending on the cadence of your configuration fetch, you might need to wait up to 10 seconds for the changes to be reflected in the client.
+Depending on the cadence of your configuration fetch, you might need to wait up to 10 seconds for the changes to be reflected in the client. You can change the cadence in which you fetch the configuration by updating the corresponding config variable.
 
 <figure><img src=".gitbook/assets/sensitive-key-toggle.gif" alt=""><figcaption></figcaption></figure>
 
