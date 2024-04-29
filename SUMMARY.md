@@ -9,7 +9,6 @@
 ## Integrate with clients
 
 * [Node](integrate-with-clients/node.js/README.md)
-  * [Setup for Lambda](integrate-with-clients/node.js/setup-for-lambda.md)
   * [Setup for NestJS on Lambda](integrate-with-clients/node.js/setup-for-nestjs-on-lambda.md)
   * [Setup for Node](integrate-with-clients/node.js/node.js.md)
   * [Setup for Express](integrate-with-clients/node.js/express.md)

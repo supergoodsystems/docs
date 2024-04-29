@@ -8,7 +8,7 @@ If you do not wish to install the Supergood library to capture everything global
 
 Note that neither method will perform an explicit flush, so if you're running on a serverless system such as lambda, we advise you to execute a `Supergood.close()` after the lambda returns a value to the client.&#x20;
 
-More instructions on getting setup for Lambda here: [Setup for Lambda](setup-for-lambda.md)
+More instructions on getting setup for Lambda here: [Setup for Lambda](broken-reference)
 
 ## withCapture
 
