@@ -112,5 +112,5 @@ Redacts full payloads excepting for any keys explicitly marked as `Allow` via th
 **Example:**
 
 ```python
-Client(config={ "redactByDefault": False })
+Client(config={ "redactByDefault": True })
 ```
