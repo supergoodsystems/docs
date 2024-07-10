@@ -20,4 +20,4 @@ Before redacting, metadata from these values including Data Type and Data Length
 
 ## Compliance
 
-Supergood is SOC2 Type I compliant and is actively undergoing an audit for SOC2 Type II. A full report is available upon request by reaching out to security@supergood.ai .
+Supergood is SOC2 Type II compliant. A full report is available upon request by reaching out to security@supergood.ai .
