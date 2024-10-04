@@ -11,7 +11,7 @@ Time in milliseconds between cache flushes. Smaller intervals are advised for la
 **Example:**
 
 ```python
-Client(config={ "flushInterval": 1000 })
+Client.initialize(config={ "flushInterval": 1000 })
 ```
 
 ## configInterval
@@ -23,7 +23,7 @@ Time in milliseconds between fetching the remote config from the Supergood wizar
 **Example:**
 
 ```python
-Client(config={ "configInterval": 5000 })
+Client.initialize(config={ "configInterval": 5000 })
 ```
 
 ## ignoredDomains
@@ -37,7 +37,7 @@ In the format of:`<domain-name>.<top-level-domain>`
 **Example**:
 
 ```python
-Client(config={ ignoredDomains: ['amazon.com', 'google.com', 'bbc.co.uk'] })
+Client.initialize(config={ ignoredDomains: ['amazon.com', 'google.com', 'bbc.co.uk'] })
 ```
 
 ## forceRedactAll
@@ -49,7 +49,7 @@ Redacts all leaf values from all payloads. Ignores allowed sensitive keys
 **Example:**
 
 ```python
-Client(config={ "forceRedactAll": True })
+Client.initialize(config={ "forceRedactAll": True })
 ```
 
 ## log{Request|Response}{Headers|Body}
@@ -62,9 +62,9 @@ _Defaults: True_
 
 ```python
 # Example 1: Log everything except responseHeaders
-Client(config={ "logResponseHeaders": False })
+Client.initialize(config={ "logResponseHeaders": False })
 # Example 2: Only log requests
-Client(config={ "logResponseHeaders": False, "logResponseBody": False}
+Client.initialize(config={ "logResponseHeaders": False, "logResponseBody": False}
 ```
 
 ## ignoreRedaction
@@ -76,7 +76,7 @@ Boolean to override the redaction of all values.
 **Example:**
 
 ```python
-Client(config={ "ignoreRedaction": True })
+Client.initialize(config={ "ignoreRedaction": True })
 ```
 
 ## useRemoteConfig
@@ -88,7 +88,7 @@ Can be set to False to ignore reading from remote config. Generally only used in
 **Example:**
 
 ```python
-Client(config={ "useRemoteConfig": False })
+Client.initialize(config={ "useRemoteConfig": False })
 ```
 
 ## runThreads
@@ -100,7 +100,7 @@ Can be set to False to stop running background threads. Generally only used in a
 **Example:**
 
 ```python
-Client(config={ "runThreads": False })
+Client.initialize(config={ "runThreads": False })
 ```
 
 ## redactByDefault
@@ -112,5 +112,5 @@ Redacts full payloads excepting for any keys explicitly marked as `Allow` via th
 **Example:**
 
 ```python
-Client(config={ "redactByDefault": True })
+Client.initialize(config={ "redactByDefault": True })
 ```
